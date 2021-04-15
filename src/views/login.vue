@@ -68,7 +68,7 @@ export default {
       alert('功能待开发...')
     },
     onClickRegisterBtn () {
-      alert('功能待开发...')
+      this.$router.push({ name: 'register' })
     },
     onSubmit (formName) {
       // 为表单绑定验证功能
@@ -76,7 +76,6 @@ export default {
         if (valid) {
           login(this.form)
             .then(res => {
-              console.log('aaaa')
               const statusCode = res.data.status_code
               switch (statusCode) {
                 case 141:

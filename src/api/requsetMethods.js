@@ -14,6 +14,18 @@ export function login (data) {
   })
 }
 /**
+ * registerStep1-post
+ * @param data 关键字
+ */
+export function register (data, step) {
+  const obj = data
+  return service({
+    url: constant.REGISTER + step,
+    method: 'post',
+    data: obj
+  })
+}
+/**
  * sendPost接口调用-post
  * @param data 关键字
  */

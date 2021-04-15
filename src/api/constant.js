@@ -9,6 +9,7 @@ const constant = {
   SEND_POST: BASE + 'sendPost',
   SEND_COMMENT: BASE + 'sendComment',
   SEND_REPLY: BASE + 'sendReply',
+  REGISTER: BASE + '/register/',
   // get
   ANNOUNCEMENT_INFO: BASE + 'announcementInfo',
   ANNOUNCEMENT_INFO_DETAIL: BASE + 'announcementInfoDetail',
