@@ -9,7 +9,8 @@ const constant = {
   SEND_POST: BASE + 'sendPost',
   SEND_COMMENT: BASE + 'sendComment',
   SEND_REPLY: BASE + 'sendReply',
-  REGISTER: BASE + '/register/',
+  REGISTER: BASE + 'register/',
+  CERTIFICATE: BASE + 'certificate',
   // get
   ANNOUNCEMENT_INFO: BASE + 'announcementInfo',
   ANNOUNCEMENT_INFO_DETAIL: BASE + 'announcementInfoDetail',
@@ -18,7 +19,8 @@ const constant = {
   POST_INFO: BASE + 'postInfo',
   POST_INFO_DETAIL: BASE + 'postInfoDetail?post_id=',
   COMMENT_INFO: BASE + 'commentInfo',
-  REPLY_INFO: BASE + 'replyInfo'
+  REPLY_INFO: BASE + 'replyInfo',
+  CERTIFICATION_INFO: BASE + 'certificationInfo?uid='
 }
 
 export default constant

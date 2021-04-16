@@ -1,36 +1,48 @@
 <template>
-  <div style="margin:2%">
-    <el-row>
-    <h1>公告详情</h1>
-    </el-row>
-    <el-row>
+  <div>
+    <el-page-header
+      @back="goBack"
+      content="公告详情页面"
+      style="margin:1%"
+    ></el-page-header>
+    <div style="margin:2%">
+      <el-row>
         <div>
           <span>发布人：</span>
-          <span v-if="announcementInfoDetail.name">{{ announcementInfoDetail.name }}</span>
+          <span v-if="announcementInfoDetail.name">{{
+            announcementInfoDetail.name
+          }}</span>
           <span v-else>-</span>
         </div>
-    </el-row>
-    <el-row>
+      </el-row>
+      <el-row>
         <div>
           <span>公告标题：</span>
-          <span v-if="announcementInfoDetail.title">{{ announcementInfoDetail.title }}</span>
+          <span v-if="announcementInfoDetail.title">{{
+            announcementInfoDetail.title
+          }}</span>
           <span v-else>-</span>
         </div>
-    </el-row>
-    <el-row>
-        <div>
-          <span>公告内容：</span>
-          <span v-if="announcementInfoDetail.context">{{ announcementInfoDetail.context }}</span>
-          <span v-else>-</span>
-        </div>
-    </el-row>
-    <el-row>
+      </el-row>
+      <el-row>
         <div>
           <span>发布时间：</span>
-          <span v-if="announcementInfoDetail.time">{{ timestampToTime(announcementInfoDetail.time) }}</span>
+          <span v-if="announcementInfoDetail.time">{{
+            timestampToTime(announcementInfoDetail.time)
+          }}</span>
           <span v-else>-</span>
         </div>
-    </el-row>
+      </el-row>
+      <el-row>
+        <div>
+          <span>公告内容：</span>
+          <span v-if="announcementInfoDetail.context">{{
+            announcementInfoDetail.context
+          }}</span>
+          <span v-else>-</span>
+        </div>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -60,8 +72,7 @@ export default {
         const statusCode = res.data.status_code
         switch (statusCode) {
           case 421:
-            this.announcementInfoDetail =
-              res.data.announcementInfoDetail
+            this.announcementInfoDetail = res.data.announcementInfoDetail
             break
           case 422:
             alert('获取用户数据失败')
@@ -73,6 +84,10 @@ export default {
       })
   },
   methods: {
+    goBack () {
+      console.log('go back')
+      this.$router.go(-1) // 返回上一层
+    }
   }
 }
 </script>

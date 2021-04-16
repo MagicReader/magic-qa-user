@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-page-header @back="goBack" content="帖子详情页面"></el-page-header>
+    <el-page-header @back="goBack" content="帖子详情页面" style="margin:1%"></el-page-header>
     <div class="view-wrapper">
       <div style="margin:2%">
         <div>

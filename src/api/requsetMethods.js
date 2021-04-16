@@ -169,3 +169,27 @@ export function getUserInfoDetail (uid) {
     method: 'get'
   })
 }
+
+/**
+ * certificationInfo-get
+ * @data data 关键字
+ */
+export function getCertificationInfo (uid) {
+  return service({
+    url: constant.CERTIFICATION_INFO + uid,
+    method: 'get'
+  })
+}
+
+/**
+ * certificate-post
+ * @data data 关键字
+ */
+export function certificate (data) {
+  const obj = data
+  return service({
+    url: constant.CERTIFICATE,
+    method: 'post',
+    data: obj
+  })
+}
