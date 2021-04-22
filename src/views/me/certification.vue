@@ -256,6 +256,8 @@ export default {
           switch (statusCode) {
             case 221:
               console.log('上传成功', res.data)
+              alert('上传成功')
+              this.$router.go(-1) // 返回上一层
               break
             case 222:
               alert('上传失败')
