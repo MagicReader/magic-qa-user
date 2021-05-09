@@ -195,7 +195,8 @@ export default {
           const statusCode = res.data.status_code
           switch (statusCode) {
             case 561:
-              console.log('发帖成功')
+              alert('发帖成功')
+              this.drawer = false
               break
             case 562:
               alert('数据库插入失败')
